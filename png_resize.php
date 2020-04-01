@@ -17,11 +17,11 @@
     list($srcHeight, $srcHeight) = getimagesize($srcFN); 
 
     // сalculate the height of the target image if height is not set
-    if ($trgHeight == 0) 
+    if (0 === $trgHeight) 
       $trgHeight = $trgWidth / ($srcWidth / $srcHeight);
 
     // Calculate the width of the target image if width is not set
-    if ($trgWidth == 0) 
+    if (0 === $trgWidth) 
       $trgWidth = $trgHeight / ($srcHeight / $srcWidth);
 
     // сreate a handle to the source image
